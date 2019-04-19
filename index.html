@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Heurist Trial</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="container">
+        	<div class="row">
+	        	<div class="col-md-3">
+	        		<h2>Search</h2>
+	        	</div>
+		        <div id="heurist" class="col-md-9">
+		        	<!-- <ul>
+				    <li v-for="post in posts" class="hvr-sweep-to-top">
+				      <div v-html="post.rec_Title">{{post.rec_Title}}</div></a>		      
+				    </li>
+				  </ul>  --> 
+				  <div v-for="post in posts" class="card">
+					  <div class="card-body">
+					    <h5 class="card-title">{{post.rec_Title}}</h5>
+					    <p class="card-text">{{post.details}}</p>
+					  </div>
+					</div>
+		        </div>
+		     </div>
+	    </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
