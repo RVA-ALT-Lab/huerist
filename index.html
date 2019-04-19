@@ -34,7 +34,9 @@
 				  <div v-for="post in posts" class="card">
 					  <div class="card-body">
 					    <h5 class="card-title">{{post.rec_Title}}</h5>
-					    <p class="card-text">{{post.details}}</p>
+					     <li v-for="thing in post.details" >					     	
+					     	{{thing}}
+						 </li>					    
 					  </div>
 					</div>
 		        </div>
