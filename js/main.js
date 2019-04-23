@@ -10,7 +10,8 @@ var blog = new Vue({
   data () {
     return {
       records: [],
-      database: null
+      database: {},
+      typeFacets: []
     }
   },
   computed: {
@@ -19,6 +20,16 @@ var blog = new Vue({
         record.rec_RecType = this.database.rectypes[record.rec_RecTypeID]
         return record
       })
+    },
+    filteredRecords () {
+      if (this.typeFacets.length === 0) {
+        return this.mappedRecords
+      } else {
+        const filteredSets = this.mappedRecords.filter(record => {
+          return this.typeFacets.includes(record.rec_RecType.name)
+        })
+        return filteredSets
+      }
     }
   },
   mounted () {
